@@ -1,0 +1,1 @@
+<img src="assets/bcn-bg.jpg" alt="Барселона ночью">
