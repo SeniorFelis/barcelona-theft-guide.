@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Что делать, если тебя обокрали в Барселоне — выживач</title>
+  <meta name="description" content="Пошаговый гайд, что делать, если тебя обокрали в Барселоне: блокировка телефона и карт, denuncia, консульства, адреса и советы безопасности." />
+  <meta name="author" content="@saintvoid911" />
+
+  <!-- Open Graph / соцсети -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Если тебя обокрали в Барселоне — честный выживач" />
+  <meta property="og:description" content="Без паники: блокируем телефон и карты, делаем denuncia, идём в консульство и возвращаем себе жизнь." />
+  <meta property="og:locale" content="ru_RU" />
+
+  <style>
+    :root {
+      --bg-main: #05060a;
+      --bg-card: #10121a;
+      --bg-card-alt: #151827;
+      --border-subtle: #22263a;
+      --accent: #ff6b4a;
+      --accent-soft: rgba(255, 107, 74, 0.18);
+      --text-main: #f3f4f7;
+      --text-muted: #9aa0b5;
+      --pill-bg: rgba(148, 163, 184, 0.14);
+      --danger: #ff4b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #151827 0, #05060a 55%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 32px 20px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(5, 6, 10, 0.9), rgba(5, 6, 10, 0.7));
+      border-bottom: 1px solid rgba(34, 38, 58, 0.8);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .pill span {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 0 0 6px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .author {
+      opacity: 0.7;
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 24px auto 80px;
+      padding: 0 16px 24px;
+    }
+
+    .intro-card {
+      background: linear-gradient(145deg, #10121a, #151827);
+      border-radius: 18px;
+      border: 1px solid var(--border-subtle);
+      padding: 18px 18px 16px;
+      margin-bottom: 22px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: "BCN";
+      position: absolute;
+      right: -20px;
+      bottom: -10px;
+      font-size: 64px;
+      font-weight: 800;
+      color: rgba(148, 163, 184, 0.04);
+      letter-spacing: 8px;
+    }
+
+    .intro-title {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+
+    .intro-text {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    section {
+      margin-bottom: 22px;
+      background: var(--bg-card);
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, var(--accent-soft), transparent 60%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      border-color: rgba(255, 107, 74, 0.35);
+      background: var(--bg-card-alt);
+    }
+
+    section:hover::before {
+      opacity: 1;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 8px 0 0 0;
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .highlight {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .muted {
+      color: var(--text-muted);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
+    .chip {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 16px 90px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Лёгкий интерактив — сворачиваемые блоки */
+    .toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .toggle span.chevron {
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .toggle.open span.chevron {
+      transform: rotate(90deg);
+    }
+
+    .content {
+      display: none;
+      animation: fade 0.25s ease;
+      margin-top: 6px;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Мобильное якорное меню снизу */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(5, 6, 10, 0.96);
+      border-top: 1px solid rgba(34, 38, 58, 0.9);
+      padding: 6px 10px 10px;
+      display: flex;
+      gap: 6px;
+      justify-content: space-between;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+    }
+
+    .bottom-nav a {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      font-size: 11px;
+      padding: 6px 6px 5px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bottom-nav a span {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 1px;
+    }
+
+    .bottom-nav a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(255, 107, 74, 0.12);
+    }
+
+    /* Псевдо-иллюстрации под тревел-журнал */
+    .stamp {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+
+    .stamp::before {
+      content: "✈";
+      margin-right: 6px;
+    }
+
+    .map-line {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 768px) {
+      header {
+        padding: 36px 20px 26px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .intro-card {
+        padding: 20px 22px 18px;
+      }
+
+      main {
+        margin-top: 28px;
+      }
+
+      .bottom-nav {
+        display: none;
+      }
+
+      footer {
+        padding-bottom: 30px;
+      }
+    }
+  </style>
+
+  <!-- schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Что делать, если тебя обокрали в Барселоне — выживач",
+    "inLanguage": "ru",
+    "author": {
+      "@type": "Person",
+      "name": "@saintvoid911"
+    },
+    "genre": "travel, safety",
+    "about": [
+      "кражи в Барселоне",
+      "что делать, если украли телефон",
+      "denuncia в Испании",
+      "советы безопасности для туристов"
+    ],
+    "keywords": [
+      "Барселона кража",
+      "что делать обокрали",
+      "потерял телефон в Барселоне",
+      "denuncia Barcelona"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="pill"><span>📍</span><span>Барселона, экстренный выживач</span></div>
+  <h1>Если тебя обокрали в Барселоне</h1>
+  <div class="tagline">Без истерик: пошаговый план, как вернуть контроль над жизнью.</div>
+  <div class="author">Автор: @saintvoid911</div>
+</header>
+
+<main>
+  <article class="intro-card" id="top">
+    <div class="stamp">notes from barcelona</div>
+    <h2 class="intro-title">Стоишь на Рамбле и не понимаешь, что только что было?</h2>
+    <p class="intro-text">
+      Телефон исчез, кошелёк улетел, Барса вдруг перестала быть милой открыткой. Нормально. 
+      Такое здесь происходит чаще, чем приносят паэлью туристам. Вдох-выдох. Сейчас разложим всё по шагам.
+    </p>
+    <div class="map-line">Маршрут: шок → блокировка → полиция → консульство → новая жизнь.</div>
+    <div class="chip-row">
+      <div class="chip">🔒 Блокировка телефона и карт</div>
+      <div class="chip">📝 Denuncia</div>
+      <div class="chip">🏛️ Консульства</div>
+      <div class="chip">🧠 Профилактика</div>
+    </div>
+  </article>
+
+  <section id="shock">
+    <div class="section-label">шаг 0 — не истерить</div>
+    <h2>Если ты сейчас в шоке</h2>
+    <p>Стоишь на Рамбле, хлопаешь глазами и думаешь: «Где мой телефон?» — классика жанра. 
+      Паника не вернёт вещи. Ты ещё в игре, пока можешь действовать.</p>
+    <p class="muted">Дальше важно: скорость и последовательность. Чем раньше заблокируешь всё цифровое — тем меньше последствий.</p>
+  </section>
+
+  <section id="how-it-works">
+    <div class="section-label">контекст</div>
+    <h2>Как тут всё устроено</h2>
+    <p>Барса — солнце, море, хамон… и чемпионы мира по тихим кражам. Карманники тут работают мягко и без лишней драматургии.
+      Для местных кражи — не сюрприз, а фон. Для тебя задача одна: минимизировать ущерб.</p>
+  </section>
+
+  <section id="typical">
+    <div class="section-label">типичные сценарии</div>
+    <h2>Где обычно всё едет</h2>
+    <ul>
+      <li><span class="highlight">Телефон вытащили из руки.</span> Лёгкое касание, отвлечение — и всё, персонаж вышел из кадра.</li>
+      <li><span class="highlight">Рюкзак висел сзади.</span> В Барсе это не рюкзак, а открытое приглашение.</li>
+      <li><span class="highlight">Оставил вещи «на минутку».</span> На стуле, песке, столе. Минутка здесь = «ты их больше не увидишь».</li>
+    </ul>
+  </section>
+
+  <section id="block" class="step">
+    <div class="section-label">шаг 1</div>
+    <h2 class="toggle" onclick="toggleBlock(0)">
+      1. Заблокировать железо 🔒
+      <span class="chevron">›</span>
+    </h2>
+    <div class="content">
+      <p><span class="highlight">Если украли телефон:</span></p>
+      <ul>
+        <li><strong>iPhone</strong> → зайди на <code>icloud.com</code> → режим Lost Mode → блокировка + стирание.</li>
+        <li><strong>Android</strong> → <code>google.com/android/find</code> → блокировка, по возможности стирание.</li>
+      </ul>
+      <p><span class="highlight">SIM-карта:</span> звони оператору и блокируй номер. Потом по документу или по копии denuncia тебе выдадут новую SIM.</p>
+      <p><span class="highlight">Кошелёк:</span> сразу блокируешь все карты через приложение банка или по телефону. 
+        Меняешь пароли, где они могли быть привязаны.</p>
+    </div>
+  </section>
+
+  <section id="denuncia" class="step">
+    <div class="section-label">шаг 2</div>
+    <h2 class="toggle" onclick="toggleBlock(1)">
+      2. Denuncia — заявление о краже 📝
+      <span class="chevron">›</span>
+    </h2>
+    <div class="content">
+      <p>Denuncia — твой главный бумажный друг после кражи. Без неё:</p>
+      <ul>
+        <li>страховка, если есть, может отказать,</li>
+        <li>банку сложнее разруливать спорные списания,</li>
+        <li>консульства и миграция тоже смотрят на неё в первую очередь.</li>
+      </ul>
+      <p>Варианты действий:</p>
+      <ul>
+        <li><strong>Онлайн</strong> через сайт <em>Mossos d'Esquadra</em>: заполняешь пред-заявление, 
+          получаешь бумагу и потом идёшь в участок подтвердить.</li>
+        <li><strong>Оффлайн</strong>: идёшь в ближайший комиссариат и оформляешь всё на месте.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="documents" class="step">
+    <div class="section-label">шаг 3</div>
+    <h2 class="toggle" onclick="toggleBlock(2)">
+      3. Украли паспорт / NIE / ВНЖ 📄
+      <span class="chevron">›</span>
+    </h2>
+    <div class="content">
+      <p><strong>Если ты гражданин РФ:</strong></p>
+      <ul>
+        <li>Идёшь в Генконсульство России в Барселоне.</li>
+        <li>Берёшь с собой: denuncia, фото (лучше несколько), заполняешь заявление.</li>
+        <li>Варианты: временный документ на возвращение или оформление нового паспорта (зависит от ситуации).</li>
+      </ul>
+      <p><strong>Если ты гражданин Украины:</strong></p>
+      <ul>
+        <li>Идёшь в Генконсульство Украины.</li>
+        <li>Тот же набор: denuncia, фото, заявление.</li>
+        <li>Дальше уже выдают либо справку на возвращение, либо оформляют новый документ.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="consulates">
+    <div class="section-label">адреса и контакты</div>
+    <h2>Консульства в Барселоне</h2>
+    <p><strong>Генеральное консульство России в Барселоне</strong><br>
+      Avinguda Pearson, 34, 08034 Barcelona<br>
+      Тел.: +34 93 280 02 20 / +34 93 280 54 32
+    </p>
+    <p><strong>Генеральное консульство Украины в Барселоне</strong><br>
+      Carrer de Numància, 185, bajos 2, 08034 Barcelona<br>
+      Тел.: +34 93 402 89 56
+    </p>
+    <p class="muted">Оба консульства в одном районе, так что бегать между ними и комиссариатом относительно удобно.</p>
+  </section>
+
+  <section id="hotspots">
+    <div class="section-label">карта рисков</div>
+    <h2>Где чаще всего крадут</h2>
+    <ul>
+      <li>Метро (особенно линии <strong>L1</strong> и <strong>L3</strong>).</li>
+      <li>Рамбла и прилегающие улицы.</li>
+      <li>Площадь Каталонии.</li>
+      <li>Пляжи и район Барселонета, особенно ночью.</li>
+      <li>Туристические автобусы и остановки.</li>
+      <li>Кафе, бары и террасы с сумками на стуле и телефоном на столе.</li>
+    </ul>
+    <p class="muted">Методика проста: отвлёк → вынул → растворился в людях.</p>
+  </section>
+
+  <section id="prevention">
+    <div class="section-label">минимум паранойи, максимум пользы</div>
+    <h2>Как реально защититься</h2>
+    <ul>
+      <li>Рюкзак — только спереди, не за спиной.</li>
+      <li>Телефон — во внутреннем кармане, а не в заднем джинсовом.</li>
+      <li>Документы — с собой носишь копию, оригинал — дома/в сейфе.</li>
+      <li>В кафе — телефон в карман, а не на стол рядом с тарелкой.</li>
+      <li>В толпе — одна рука на сумке/рюкзаке, глаза не в потолок.</li>
+    </ul>
+  </section>
+
+  <section id="final">
+    <div class="section-label">финал</div>
+    <h2>Финальный совет</h2>
+    <p>Кража — это неприятно, особенно когда город казался открыткой и отпуск — сказкой. Но это не конец света.</p>
+    <p>Телефон, карты, документы — всё это восстанавливается. Нервные клетки — спорный вопрос, но и они успокаиваются.
+      Главное — быстро действовать, не тупить и не винить себя бесконечно.</p>
+    <p class="muted">Если у тебя стопор с denuncia, испанским, операторами, банками или консульствами — 
+      найди людей, кто уже через это проходил, или юриста/переводчика. В этом ты точно не один.</p>
+  </section>
+
+</main>
+
+<footer>
+  Сделано без иллюзий и с практической пользой. Автор: @saintvoid911
+</footer>
+
+<!-- Мобильное якорное меню -->
+<nav class="bottom-nav">
+  <a href="#shock"><span>😵</span>Шок</a>
+  <a href="#block"><span>🔒</span>Блок</a>
+  <a href="#denuncia"><span>📝</span>Denuncia</a>
+  <a href="#consulates"><span>🏛️</span>Консулы</a>
+  <a href="#prevention"><span>🧠</span>Защита</a>
+</nav>
+
+<script>
+  function toggleBlock(i) {
+    const blocks = document.querySelectorAll('.content');
+    const headers = document.querySelectorAll('.step .toggle');
+    const block = blocks[i];
+    const header = headers[i];
+
+    const isOpen = block.style.display === 'block';
+    block.style.display = isOpen ? 'none' : 'block';
+
+    if (header) {
+      if (isOpen) {
+        header.classList.remove('open');
+      } else {
+        header.classList.add('open');
+      }
+    }
+  }
+
+  // Подсветка активного пункта нижнего меню при скролле
+  const sections = [
+    { id: 'shock', link: null },
+    { id: 'block', link: null },
+    { id: 'denuncia', link: null },
+    { id: 'consulates', link: null },
+    { id: 'prevention', link: null }
+  ];
+
+  const navLinks = document.querySelectorAll('.bottom-nav a');
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+    const id = href && href.startsWith('#') ? href.slice(1) : null;
+    const target = sections.find((s) => s.id === id);
+    if (target) {
+      target.link = link;
+    }
+  });
+
+  function onScroll() {
+    let currentId = null;
+    const scrollY = window.scrollY;
+
+    sections.forEach((s) => {
+      const el = document.getElementById(s.id);
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const offsetTop = rect.top + window.scrollY;
+      if (scrollY + 120 >= offsetTop) {
+        currentId = s.id;
+      }
+    });
+
+    navLinks.forEach((link) => link.classList.remove('active'));
+    if (currentId) {
+      const activeSection = sections.find((s) => s.id === currentId);
+      if (activeSection && activeSection.link) {
+        activeSection.link.classList.add('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+</script>
+
+</body>
+</html>
